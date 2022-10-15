@@ -10,8 +10,8 @@ app.set('view engine', 'ejs');
 //mongoose.connect("mongodb+srv://erneleyposso:<IUD16276107>@dbiudigital.sn7ribj.mongodb.net/dbiudigital", {useNewUrlParser:true},{useUnifiedTopology:true})
 
 //mongoose.connect("mongodb+srv://erneleyposso:<IUD16276107>@dbiudigital.sn7ribj.mongodb.net/?retryWrites=true&w=majority")
-mongoose.connect("mongodb://localhost/iudigital")
-
+//mongoose.connect("mongodb://localhost/iudigital")
+mongoose.connect("mongodb+srv://erneleyposso:IUD16276107@dbiudigital.sn7ribj.mongodb.net/test");
 //crea el esquema de equipos
 const invschema={
 
@@ -205,8 +205,8 @@ app.get("/listar",function(req,res){
 
 
  // abrir puerto   
-
-app.listen(3000,function(){
+const PORT=process.env.PORT || undefined || 3000
+app.listen(PORT,function(){
 
     console.log("SERVER RUNNING");
     
